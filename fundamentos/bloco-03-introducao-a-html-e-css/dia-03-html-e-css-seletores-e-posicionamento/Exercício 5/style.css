@@ -1,0 +1,89 @@
+ol li 
+{
+    background-color: yellow;
+
+}
+
+ol li:nth-of-type(even)
+{
+    
+    color: green;
+}
+
+ol li:nth-of-type(odd)
+{
+    text-transform: uppercase;
+
+}
+
+h:nth-of-type(odd){
+    color: blue;
+}
+
+h1, h2, h3 
+{
+    color: red;
+
+}
+h1 em, h2 em, h3 em
+{
+  font-size: 40px;
+  border: 1px solid black;
+
+}
+
+li 
+{
+    font-size: 20px;
+}
+li em 
+{
+    font-weight: bold;
+}
+
+{
+  color: blue;
+
+}
+
+#linguagens li:not(:nth-child(n+4))
+{
+    color: blue;
+}
+.javaPink
+{
+    background-color: pink;
+
+}
+
+#mAliados li:hover
+{
+ font-weight: bold;
+
+}
+#mAliados li:hover a[href*="stackoverflow"]
+{
+    color: orange;
+}
+
+#mAliados li:hover a[href*="w3schoo"]
+{
+   color: green
+
+}
+#mAliados li:hover a[href*="mozilla"]
+{
+ color:black;
+
+}
+#mAliados li:hover a[href*="devdocs"]
+{
+    color: yellow;
+}
+
+#mAliados li:hover a[href*="betrybe"]
+{
+    color: green;
+}
+
+
