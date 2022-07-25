@@ -15,8 +15,12 @@ let car = {
     year: 2020
   };
 
-console.log('------------------------------------')
+console.log('------------------------------------');
 
 for (let key in car){
-    console.log(key + ':',car[key])
+    console.log(key + ':',car[key]);
 }
+
+
+const object = { a: 1, b: 2, c: 3 };
+
