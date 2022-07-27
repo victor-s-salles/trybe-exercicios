@@ -17,4 +17,7 @@ for (let index = 0 ; index < document.querySelectorAll('.no-emergency-tasks h3')
 corEmergencia.style.backgroundColor = 'black';
 }
 
+let footerColor = document.getElementById('footer-container');
+footerColor.style.backgroundColor = "green"
+
 
