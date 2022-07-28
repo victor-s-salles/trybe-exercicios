@@ -20,4 +20,9 @@ corEmergencia.style.backgroundColor = 'black';
 let footerColor = document.getElementById('footer-container');
 footerColor.style.backgroundColor = "green"
 
+ 
+
+
+
+}
 
