@@ -64,7 +64,14 @@
 
         //2
         let mainContent = document.createElement('main');
-        mainContent.id = 'main-content'
+        mainContent.id = 'main-content';
+        document.body.appendChild(mainContent);
+
+        //3
+        let sectionContent = document.createElement('section');
+        sectionContent.id = 'center-content';
+        document.getElementById('main-content').appendChild(sectionContent);
+
       
     
 
