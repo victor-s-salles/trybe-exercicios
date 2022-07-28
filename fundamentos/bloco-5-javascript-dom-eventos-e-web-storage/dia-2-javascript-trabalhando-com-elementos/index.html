@@ -92,6 +92,24 @@
         image1.className = 'small-image';
         sectionLeft.appendChild(image1);
 
+        //8
+        let list = document.createElement('ul');
+        sectionRight.appendChild(list);
+
+        let numeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
+        'Sete', 'Oito', 'Nove', 'Dez'];
+
+        for(let number in numeros){
+            let elementeLi = document.createElement('li');
+            elementeLi.innerText = numeros[number];
+            list.appendChild(elementeLi);
+
+
+        }
+
+        
+
+
 
 
       
