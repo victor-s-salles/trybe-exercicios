@@ -70,6 +70,7 @@
         //3
         let sectionContent = document.createElement('section');
         sectionContent.id = 'center-content';
+        sectionContent.className = 'center-content';
         document.getElementById('main-content').appendChild(sectionContent);
 
         //4
@@ -132,6 +133,16 @@
         //4
         let sectionRightContent = document.getElementsByClassName('right-content')[0];
         sectionRightContent.style.marginRight='auto';
+
+        //5
+        let mudarCor = document.getElementById('center-content');
+        mudarCor.parentNode.style.backgroundColor = 'green'
+
+        //6
+        let ul = document.getElementsByTagName('ul')[0];
+        ul.lastChild.remove();
+        ul.lastChild.remove();
+
 
 
 
