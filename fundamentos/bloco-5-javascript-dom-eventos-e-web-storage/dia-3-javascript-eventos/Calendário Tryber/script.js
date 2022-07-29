@@ -24,24 +24,69 @@ function createDaysOfTheMonth() {
     let day = decemberDaysList[index];
     let dayItem = document.createElement('li');
     dayItem.innerHTML = day;
-
-        if (day === 24 || day === 25 || day === 31){
+    if (day === 24 || day === 31) {
+       
         dayItem.className = 'day holiday'; 
+        getDaysList.appendChild(dayItem); 
+      } else if (day === 4 || day === 11 || day === 18) {
+        // Caso o dia for 4, 11 ou 18
+        dayItem.className = 'day friday'; 
         getDaysList.appendChild(dayItem);
-    }
-    
-    if (day === 4 || day === 11 || day === 18 ){
-        dayItem.className = 'day friday';
+      } else if (day === 25) {
+        // Caso o dia for 25
+        dayItem.className = 'day holiday friday'; 
         getDaysList.appendChild(dayItem);
-    } else if(day === 25 ){
-        dayItem.className = 'day holiday friday';
-        getDaysList.appendChild(dayItem);
-    } else {
+      } else {
+       
         dayItem.className = 'day';
-      getDaysList.appendChild(dayItem);
-     }
+        getDaysList.appendChild(dayItem);
+      }
   }
 }
  
 createDaysOfTheMonth();
+
+
+function createHolidays(nomeDoBotao){
+    let buttonContainer = document.querySelector('.buttons-container');
+    let newButton = document.createElement('button');
+    let newButtonID = 'btn-holiday';
+
+    newButton.innerHTML = nomeDoBotao;
+    newButton.id = newButtonID;
+
+
+    buttonContainer.appendChild(newButton);
+
+}
+createHolidays('Feriados');
+
+
+function corHolidays (){
+    let getHolidauButton = document.querySelector('#btn-holiday');
+    let getHolidays = document.querySelectorAll('.holiday');
+    let backgroundColor = 'rgb(238,238,238)';
+    let setNewColor = 'white';
+
+    getHolidauButton.addEventListener('click', function() {
+        for(let index = 0 ; index < getHolidays.length; index += 1)
+
+        if (getHolidays[index].style.backgroundColor === setNewColor){
+            getHolidays[index].style.backgroundColor = backgroundColor;
+
+        } else {
+            getHolidays[index].style.backgroundColor = setNewColor;
+
+        }
+
+    })
+}
+
+corHolidays();
+
+// --------------- Resolvido os requisitos até o 4 ----------------------- ///
+
+
+
+
 
