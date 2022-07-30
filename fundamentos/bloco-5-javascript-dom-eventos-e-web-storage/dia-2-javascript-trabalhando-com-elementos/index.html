@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        //1
+        let text1 = document.createElement('h1');
+        text1.innerText = 'Exercício 5.2 - JavaScript DOM';
+        document.body.appendChild(text1);
+
+        //2
+        let mainContent = document.createElement('main');
+        mainContent.id = 'main-content';
+        document.body.appendChild(mainContent);
+
+        //3
+        let sectionContent = document.createElement('section');
+        sectionContent.id = 'center-content';
+        sectionContent.className = 'center-content';
+        document.getElementById('main-content').appendChild(sectionContent);
+
+        //4
+        let paragraf1 = document.createElement('p');
+        document.getElementById('center-content').appendChild(paragraf1);
+
+        //5
+        let sectionLeft = document.createElement('section');
+        sectionLeft.className = 'left-content';
+        document.getElementById('main-content').appendChild(sectionLeft);
+
+        //6
+        let sectionRight = document.createElement('section');
+        sectionRight.className = 'right-content';
+        document.getElementById('main-content').appendChild(sectionRight);
+
+        //7
+        let image1 = document.createElement('img');
+        image1.src = 'https://picsum.photos/200';
+        image1.className = 'small-image';
+        sectionLeft.appendChild(image1);
+
+        //8
+        let list = document.createElement('ul');
+        sectionRight.appendChild(list);
+
+        let numeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
+        'Sete', 'Oito', 'Nove', 'Dez'];
+
+        for(let number in numeros){
+            let elementeLi = document.createElement('li');
+            elementeLi.innerText = numeros[number];
+            list.appendChild(elementeLi);
+        }
+
+        //9
+        for(let index = 0; index < 3 ; index+=1){
+            let tagh3 = document.createElement('h3')
+            tagh3.innerText = 'Tag h3 number ' + index
+            mainContent.appendChild(tagh3);
+        }
+
+        
+
+        // --------------- Alterações e Remoções (Segundo passo) ------------------------
+        //1
+        text1.className ='title';
+
+        //2
+        elementosh3 = document.getElementsByTagName('h3');
+
+        for (let index = 0; index < 3; index+=1) {
+           
+            elementosh3[index].className = 'description';  
+        }
+
+        //3
+        mainContent.removeChild(sectionLeft)
+
+        //4
+        let sectionRightContent = document.getElementsByClassName('right-content')[0];
+        sectionRightContent.style.marginRight='auto';
+
+        //5
+        let mudarCor = document.getElementById('center-content');
+        mudarCor.parentNode.style.backgroundColor = 'green'
+
+        //6
+        let ul = document.getElementsByTagName('ul')[0];
+        ul.lastChild.remove();
+        ul.lastChild.remove();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
