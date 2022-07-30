@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <script>
+//1
+function changeText() {
+
+    let paragraph = document.getElementsByTagName('p')[1];
+    paragraph.innerHTML = "Ganhar 4.000 e estar em uma grade empresa!!";
+}
+changeText();
+//2
+function mudarQuadradoA(){
+    let quadrado = document.getElementsByClassName('main-content')[0];
+    quadrado.style.background = "rgb(76,164,109)";
+
+}
+mudarQuadradoA();
+//3
+function mmudarQuadradoV(){
+    let quadrado = document.getElementsByClassName('center-content')[0];
+    quadrado.style.background = "white";
+}
+mmudarQuadradoV()
+//4
+function correText(){
+    let text = document.getElementsByClassName('title')[0]
+    text.innerHTML = "Exercício 5.1 - JavaScript"
+}
+correText();
+//5
+function upCase(){
+    for(let index = 0 ; index < document.getElementsByTagName('p').length ; index +=1 ){
+    let cases = document.getElementsByTagName('p')[index];
+    cases.style = 'text-transform: uppercase';
+        }
+
+    }
+upCase();
+
+//6
+function consoleDemonstration(){
+    for(let index = 0 ; index < document.getElementsByTagName('p').length ; index +=1 ){
+    console.log(document.getElementsByTagName('p')[index].innerText);
+        }
+}
+consoleDemonstration();
+
+</script>
+  </body>
+</html>
