@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+    <style>
+        main {
+            border: 2px solid black;
+            display: inline-block;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>TrybeTrip</h1></header>
+    <form action="">
+        <main>
+            <div class="lineForm">
+            <label for="input-name">Nome:</label>
+            <input type="text" name="name" id="input-name" minlength="10" maxlength="40">
+            </div>
+            <div class="lineForm">
+            <label for="input-email">Email:</label>
+            <input type="email" name="email" id="input-email" minlength="10" maxlength="50">
+            </div>
+            <div class="lineForm">
+                <label for="Cidade">
+                <input type="radio" name="destiny" id="Cidade">Cidade
+                </label>
+                <label for="Campo">
+                <input type="radio" name="destiny" id="Campo">Campo
+                </label>
+                <label for="Praia">
+                <input type="radio" name="destiny" id="Praia">Praia
+                </label>
+                <label for="Montanhas">
+                <input type="radio" name="destiny" id="Montanhas">Montanhas
+                </label>
+              
+            <div class="lineForm">
+                <p>Espaço para digitar a resposta</p>
+                <textarea name="local" id="input-local" cols="30" rows="6" style="resize: none"></textarea>
+            </div>
+            <div class="lineForm">
+                <p>Qual a melhor data para realizar sua viagem?</p>
+                <input type="date" name="input-date" id="date">
+            </div>
+            <div class="lineForm">
+                <label for="confirm1">
+                <input type="checkbox" name="" id="confirm1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+                <br></label>
+                <label for="confirm2">
+                <input type="checkbox" name="" id="confirm2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+                <br></label>
+                <label for="confirm3">
+                <input type="checkbox" name="" id="confirm3">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+            </label>
+            </div> </main>
+            <div class="lineForm">
+                <button type="submit" id="enviar">Enviar</button>
+                <button type="button" id="clear-btn">Apagar informações</button>
+            </div>
+           
+            <script>
+                let button = document.getElementById('enviar')
+                button.addEventListener('click', function (event){
+                    event.preventDefault();
+                })
+
+                function clearFields() {
+                const formElements = document.querySelectorAll('input');
+                const textArea = document.querySelector('textarea');
+                for (let index = 0; index < formElements.length; index += 1) {
+                const userInput = formElements[index];
+                userInput.value = '';
+                userInput.checked = false;
+                }
+                textArea.value = '';
+                }
+
+            let button2 = document.getElementById('clear-btn');
+            button2.addEventListener('click', clearFields);
+            </script>
+        
+    </form>
+    
+</body>
+</html>
