@@ -8,10 +8,12 @@
   
   *, *:before, *:after {
     box-sizing: inherit;
+    
   }
   
   body {
-  
+    font-size: 1.3em;
+    margin: 0 3%;
   }
   
   article {
@@ -19,6 +21,8 @@
   }
   
   h1 {
+    font-size: 1.3em;
+    text-align: center;
   
   }
   
@@ -28,6 +32,7 @@
   
   img {
       max-width: 100%;
+      margin-top: 30px;
   }
   
   main {
@@ -45,3 +50,55 @@
   figcaption {
     font-size: .8em;
   }
+
+ 
+@media screen and (min-width: 800px) {
+    body {
+      background: rgba(0,0,255,.2);
+      margin: 25px 6%;
+      display: flex;
+      flex-direction: column;
+    }
+    section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+  
+  
+    figure {
+      width: 45%;
+      margin-right: 4.5%;
+      min-width: 40%;
+    
+      
+      }
+
+ } 
+
+ @media screen and (min-width: 1300px) {
+    body {
+        background: rgba(62, 151, 121, 0.2);
+        margin: 25px 6%;
+        display: flex;
+        flex-direction: column;
+        max-width:  1130px;
+        margin-left: auto;
+        margin-right: auto;
+
+      }
+      section{
+          display: flex;
+          flex-wrap: wrap;
+      }
+    
+    
+      figure {
+        width: 45%;
+        margin-right: 4.5%;
+    
+      
+        
+        }
+
+
+ }
