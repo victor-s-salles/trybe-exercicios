@@ -5,3 +5,43 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+  body{
+    margin: 5%;
+  }
+  header p {
+    font-size: x-large;
+    text-align: center;
+  }
+  header nav ul {
+    display: flex;
+    justify-content:space-evenly
+  }
+  @media screen and (min-width: 800px){
+
+    body{
+        margin: 2%;
+        max-width: 90%;
+      }
+      header {
+        width: 100%;
+      }
+      header p {
+        font-size: xxx-large;
+        text-align: center;
+      }
+      header nav ul {
+        display: flex;
+        justify-content:flex-start;
+        font-size: x-large;
+      }
+      header nav ul li {
+        flex-basis: 40%;
+      }
+      div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      aside {
+        min-width: 40%;
+      }
+  }
