@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>@import './node_modules/pikaday/css/pikaday.css';</style>
+    <title>TrybeTrip</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    <header class=" p-1 bg-success text-white"><h1 class="text-center">TrybeTrip</h1></header>
+    <form  action="">
+        <main class="container mt-3  border  rounded">
+            <div >
+            <label class="form-label" for="input-name">Nome:</label>
+            <input class="form-control" type="text" name="name" id="input-name" minlength="10" maxlength="40">
+            </div>
+            <div >
+            <label class="form-label" for="input-email">Email:</label>
+            <input class="form-control" type="email" name="email" id="input-email" minlength="10" maxlength="50">
+            </div>
+            <div class="mt-2">
+                <label class="form-check-label" for="Cidade">
+                <input class="form-check-input" type="radio" name="destiny" id="Cidade">Cidade
+                </label>
+                <label class="form-check-label" for="Campo">
+                <input  class="form-check-input" type="radio" name="destiny" id="Campo">Campo
+                </label>
+                <label  class="form-check-label"for="Praia">
+                <input  class="form-check-input"type="radio" name="destiny" id="Praia">Praia
+                </label>
+                <label  class="form-check-label" for="Montanhas">
+                <input  class="form-check-input"type="radio" name="destiny" id="Montanhas">Montanhas
+                </label>
+              
+            <div>
+                <p class="mt-2">Espaço para digitar a resposta</p>
+                <textarea class="form-control" name="local" id="input-local" cols="30" rows="6" style="resize: none"></textarea>
+            </div>
+            <div >
+                <p>Qual a melhor data para realizar sua viagem?</p>
+                <input class="form-control" type="text" id="date" data-validate-field="date">
+            </div>
+            <div class="container mt-2 mb-2 ">
+                <label for="confirm1">
+                <input   class="form-check-input mt-0"type="checkbox" name="" id="confirm1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+                <br></label>
+                <label for="agreement">
+                <input   class="form-check-input mt-0"type="checkbox" name="agreement" id="agreement" required >Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+                <br></label>
+            </label>
+            </div> </main>
+            <div class="container mt-3">
+                <button class="btn btn-success" type="submit" id="submit-btn" disabled >Participar do concurso TrybeTrip</button>
+                <button class="btn btn-warning" type="reset" id="clear-btn">Apagar informações</button>
+            </div>
+               </form>
+    <script src="scripts.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+</body>
+</html>
