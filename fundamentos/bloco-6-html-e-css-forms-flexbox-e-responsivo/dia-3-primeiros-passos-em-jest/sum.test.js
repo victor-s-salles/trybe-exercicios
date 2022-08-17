@@ -1,4 +1,4 @@
-const {sum, myRemove, myFizzBuzz} = require('./sum')
+const {sum, myRemove, myFizzBuzz, encode, decode} = require('./sum')
 
 describe('teste da função sum', () => {
     it('deve retorna o resultado correto das somas', () =>{
@@ -34,4 +34,26 @@ describe('teste da função myFizzBuzz', () => {
         expect(myFizzBuzz('2')).toBe(false);
         
       })
+})
+// ------------------------------------------- 4 ----------------------------
+
+describe('testa a função encode e decode', () =>{
+    it('verifica se a função encode e decode são funções', () => {
+        expect(typeof encode).toEqual('function');
+        expect(typeof decode).toEqual('function');
+    })
+    it('teste se as vogais a, e, i, o, u são convertidas em 1, 2, 3, 4 e 5, respectivamente', () => {
+        expect(encode('aeiou')).toEqual('12345');
+    })
+    it('teste se os números 1, 2, 3, 4 e 5 são convertidos nas vogais a, e, i, o, u, respectivamente', () =>{
+        expect(decode('12345')).toEqual('aeiou');
+    })
+    it('Teste se as demais letras/números não são convertidos para cada caso', ()=> {
+        expect(encode('akeiw')).toEqual('1k23w');
+        expect(decode('1k23w')).toEqual('akeiw');
+    })
+    it('Teste se a string que é retornada pelas funções têm o mesmo número de caracteres que a string passada como parâmetro.', () =>{
+        expect(encode('akeiw').length).toEqual(5);
+        expect(decode('1k23w').length).toEqual(5);
+    })
 })

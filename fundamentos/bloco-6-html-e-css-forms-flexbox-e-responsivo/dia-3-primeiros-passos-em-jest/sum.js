@@ -24,5 +24,40 @@ function myRemove(arr, item) {
     return num;
   }
   
+  function encode(frase) {
+    let vog = ['a', 'e', 'i', 'o', 'u'];
+    let vog2 = ['1', '2', '3', '4', '5'];
+    frase = frase.split('');
   
-  module.exports = {sum, myRemove, myFizzBuzz};
+    for (let index = 0; index < frase.length; index += 1) {
+      for (let index2 = 0; index2 < vog.length; index2 += 1) {
+        if (frase[index] === vog[index2]) {
+          frase[index] = vog2[index2];
+        }
+      }
+    }
+    frase = frase.join('');
+  
+    return frase;
+  }
+
+  function decode(frase) {
+    let vog2 = ['a', 'e', 'i', 'o', 'u'];
+    let vog = ['1', '2', '3', '4', '5'];
+    frase = frase.split('');
+  
+    for (let index = 0; index < frase.length; index += 1) {
+      for (let index2 = 0; index2 < vog.length; index2 += 1) {
+        if (frase[index] === vog[index2]) {
+          frase[index] = vog2[index2];
+        }
+      }
+    }
+    frase = frase.join('');
+  
+    return frase;
+  }
+
+
+  
+  module.exports = {sum, myRemove, myFizzBuzz, encode, decode};
