@@ -58,6 +58,34 @@ function myRemove(arr, item) {
     return frase;
   }
 
+  function techList(tecnologia, nomes) {
+    let array = [];
+    if (tecnologia.length != 0 && nomes != "") {
+      for (let tech of tecnologia.sort()) {
+        array.push({'tech': tech, 'name': nomes });
+      }
+      return array;
+    } else {
+      return 'Vazio!';}
+    }
+
+    function hydrate(frase) {
+      let numbers = frase.replace(/[^0-9]/g, '');
+      numbers = numbers.split('');
+      let cont = 0;
+      let bar = '';
+      for (let index in numbers) {
+        cont += parseInt(numbers[index]);
+      }
+    
+      if (cont > 1) {
+        bar = `${cont} copos de água`;
+      } else bar = `${cont} copo de água`;
+      console.log(cont);
+    
+      return bar;
+    }
+
 
   
-  module.exports = {sum, myRemove, myFizzBuzz, encode, decode};
+  module.exports = {sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate};
