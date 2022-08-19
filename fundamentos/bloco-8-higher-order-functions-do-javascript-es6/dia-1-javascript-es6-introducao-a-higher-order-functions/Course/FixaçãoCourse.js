@@ -11,7 +11,4 @@ const dormir = () => 'Partiu dormir!!';
 
 const doingThings = (func) => func();
 
-
-
-
 console.log(doingThings(cafe));
