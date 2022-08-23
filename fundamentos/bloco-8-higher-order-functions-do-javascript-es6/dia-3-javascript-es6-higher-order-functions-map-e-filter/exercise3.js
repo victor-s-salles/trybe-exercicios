@@ -74,9 +74,9 @@ const books = [
     releaseYear: 1991,
   };
   
-  function getNamedBook() {
+  function fantasyOrScienceFiction() {
     // escreva seu código aqui
-    return books.find((book) => book.name.length === 26)
+    return books.filter((book) => book.genre === 'Fantasia' || book.genre ==='Ficção Científica');
   }
 
-  console.log(getNamedBook());
+  console.log(fantasyOrScienceFiction());
