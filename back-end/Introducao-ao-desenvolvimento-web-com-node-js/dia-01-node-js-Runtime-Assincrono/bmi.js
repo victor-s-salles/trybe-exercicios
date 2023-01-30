@@ -1,11 +1,17 @@
-function calcImc (peso, altura) {
-   const IMC = peso/(altura*altura)
+const readline = require('readline-sync')
+
+
+function calcImc () {
+
+    const weight = readline.questionInt('Qual é seu peso? (kg) ')
+    const height = readline.questionFloat("Qual é sua altura? (cm) ")
+   const IMC = weight/(height*height)
 
    return IMC
 }
 
 function main() {
-    const IMC = calcImc(50, 1.6)
+    const IMC = calcImc()
 
     console.log(IMC);
 }
